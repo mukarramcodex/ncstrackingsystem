@@ -1,3 +1,5 @@
-<div {{ $attributes->merge(['class' => 'text-sm text-gray-500']) }}>
+@props(['class' => ''])
+
+<p {{ $attributes->merge(['class' => 'text-sm text-muted-foreground ' . $class]) }}>
     {{ $slot }}
-</div>
+</p>
