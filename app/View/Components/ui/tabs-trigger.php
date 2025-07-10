@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class tabs-trigger extends Component
+class tabstrigger extends Component
 {
     /**
      * Create a new component instance.

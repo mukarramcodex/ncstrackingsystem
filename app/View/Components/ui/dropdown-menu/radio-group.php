@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\ui\dropdown-menu;
+namespace App\View\Components\ui\dropdownmenu;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class radio-group extends Component
+class radiogroup extends Component
 {
     /**
      * Create a new component instance.

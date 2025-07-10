@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class create-dialog extends Component
+class createdialog extends Component
 {
     /**
      * Create a new component instance.

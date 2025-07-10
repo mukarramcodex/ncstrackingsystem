@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class toast-description extends Component
+class toastdescription extends Component
 {
     /**
      * Create a new component instance.
