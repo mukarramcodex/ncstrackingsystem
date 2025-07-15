@@ -20,6 +20,7 @@ class Parcel extends Model
         'notes',
         'sender_email',
         'receiver_email',
+        'receiver_number',
     ];
 
     protected $casts = [ 
