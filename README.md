@@ -38,7 +38,10 @@ A full-stack Laravel application to manage and track courier parcels for North C
 
 ---
 
+
 ## 📁 Project Structure
+
+``` bash
 
 ├── app/
 │ ├── Models/
@@ -56,9 +59,11 @@ A full-stack Laravel application to manage and track courier parcels for North C
 ├── routes/
 │ ├── web.php
 
+```
 
 ## ⚙️ Setup Instructions
 
+``` bash
 1. **Clone the repo**
 git clone https://github.com/yourusername/ncs-courier-tracking.git
 cd ncs-courier-tracking
@@ -81,6 +86,8 @@ php artisan migrate --seed
 
 6. **Serve the app**
 php artisan serve
+
+```
 
 ## 🔐 Admin Login (Default Seeder)
 Email: admin@ncs.com
