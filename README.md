@@ -60,7 +60,6 @@ A full-stack Laravel application to manage and track courier parcels for North C
 ## ⚙️ Setup Instructions
 
 1. **Clone the repo**
-```bash
 git clone https://github.com/yourusername/ncs-courier-tracking.git
 cd ncs-courier-tracking
 
