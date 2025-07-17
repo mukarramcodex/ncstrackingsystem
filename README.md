@@ -4,11 +4,11 @@ A full-stack Laravel application to manage and track courier parcels for North C
 
 ## 🛠️ Built With
 
-- **Laravel 10+**
-- **Blade Templating + Tailwind CSS**
-- **MySQL** (via phpMyAdmin/XAMPP)
-- **Laravel Auth** (with role-based access)
-- **Hostinger Shared Hosting (Deployment Ready)**
+- **Laravel 12+**
+- **Blade Templating + LiveWire + AlpineJS + Tailwind CSS**
+- **MySQL** 
+- **Laravel Auth** 
+- 
 
 ---
 
@@ -56,7 +56,6 @@ A full-stack Laravel application to manage and track courier parcels for North C
 ├── routes/
 │ ├── web.php
 
----
 
 ## ⚙️ Setup Instructions
 
