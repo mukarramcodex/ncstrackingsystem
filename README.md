@@ -91,25 +91,21 @@ Password: password
 Email: staff@ncs.com
 Password: password
 
-🔜 Coming Soon
+## 🔜 Coming Soon
 Customer Registration & Dashboard
 
 SMS/Email Notifications
 
-API Support
-
-React + Laravel API (Frontend Refactor)
-
 Desktop Application & Mobile Application
 
-📃 License
+## 📃 License
 This project is open-sourced under the MIT license.
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 Feel free to fork and submit a PR.
 
-✉️ Contact
+## ✉️ Contact
 Mukarram Ali
 Full Stack Laravel & Frontend Developer
 LinkedIn [@muhammadmukarramali](https://www.linkedin.com/in/muhammadmukarramali/) | Email [hello@mukarramali.net](mailto:info.mukarramali@gmail.com)
