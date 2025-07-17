@@ -24,11 +24,41 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        $request->validate([
+            'login' => 'required|string',
+            'password' => 'required|string',
+        ]);
+
+        $loginType = filter_var($request->login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+        $credentials = [ $loginType => $request->login, 'password' => $request->password];
+
+        if (filter_var($request->login, FILTER_VALIDATE_EMAIL)) {
+            $credentials[ 'email' ] = $request->login;
+        } else {
+            $credentials[ 'username' ] = $request->login;
+        }
+
+        if (!Auth::attempt($credentials, $request->boolean('remember'))) {
+            return back()->withErrors([
+                'login' => 'Invalid Login Credentials.'
+            ]);
+        }
+
         $request->authenticate();
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        $user = Auth::user();
+
+        if ($user->role === 'admin') {
+            return redirect()->intended('/admin/dashboard');
+        } elseif ($user->role === 'staff') {
+            return redirect()->intended('/staff/dashboard');
+        } else {
+            return redirect()->intended('/');
+        }
+
+        // return redirect()->intended(route('dashboard', absolute: false));
         // return redirect()->intended(RouteServiceProvider::HOME);
     }
 
