@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Parcel;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class StaffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,17 +33,9 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(string $id)
     {
-        $totalParcels = Parcel::count();
-        $deliveredParcels = Parcel::where('status', 'Delivered')->count();
-        $inTransitParcels = Parcel::where('status', 'In Transit')->count();
-
-        return view('admin.dashboard', [
-            'totalParcels' => $totalParcels,
-            'deliveredParcels' => $deliveredParcels,
-            'inTransitParcels' => $inTransitParcels,
-        ]);
+        return view('staff.dashboard');
     }
 
     /**
