@@ -21,7 +21,11 @@ class ParcelController extends Controller
      */
     public function create()
     {
-        return view('parcels.create');
+        $lastReceipt = Parcel::orderBy('id', 'desc')->value('receipt_number');
+        $nextReceipt = $lastReceipt ? (int)$lastReceipt + 1 : 10000;
+        return view('parcels.create', [
+            'nextReceipt' => str_pad($nextReceipt, 4, '0', STR_PAD_LEFT),
+        ]);
     }
 
     /**
@@ -36,6 +40,7 @@ class ParcelController extends Controller
             'origin' => 'required',
             'destination' => 'required',
             'status' => 'required',
+            'payment_status' => 'required',
             'booking_officer' => 'required',
         ]);
         Parcel::create($validated);
@@ -67,6 +72,7 @@ class ParcelController extends Controller
             'receiver_email' => 'required',
             'orgin' => 'required',
             'status' => 'required',
+            'payment_status' => 'required',
             'destination' => 'required',
             'customer_name' => 'required',
         ]);

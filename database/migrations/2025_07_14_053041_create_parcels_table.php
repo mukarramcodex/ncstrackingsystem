@@ -51,6 +51,8 @@ return new class extends Migration
             $table->string('branch')->nullable();
             $table->enum('status', ['Pending', 'In Transit', 'Out for Delivery', 'Delivered'])
                         ->default('Pending');
+            $table->enum('payment_status', ['Un Paid', 'Paid'])
+                        ->default('Un Paid');
             $table->string('tracking_number')->unique();
             $table->timestamps();
         });

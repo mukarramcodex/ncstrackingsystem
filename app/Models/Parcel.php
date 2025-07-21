@@ -37,6 +37,7 @@ class Parcel extends Model
         'booking_officer',
         'branch',
         'status',
+        'payment_status',
         'tracking_number',
     ];
 
