@@ -30,13 +30,13 @@ class ParcelController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'tracking_id' => 'required|unique:parcels',
-            'tracking_number'=> 'required|unique:parcels',
-            'receiver_email' => 'required',
-            'orgin' => 'required',
+            'booking_id' => 'required|unique:parcels',
+            'receipt_number' => 'required|unique:parcels',
+            'tracking_number' => 'required|unique:parcels',
+            'origin' => 'required',
             'destination' => 'required',
             'status' => 'required',
-            'customer_name' => 'required|string|max:255',
+            'booking_officer' => 'required',
         ]);
         Parcel::create($validated);
         return redirect()->route('parcels.index')->with('success', 'Parcel created successfully');
@@ -74,7 +74,7 @@ class ParcelController extends Controller
 
         return redirect()->route('parcels.index')->with('success', 'Parcel Updated.');
     }
-    
+
     /**
      * Update the specified resource in storage.
      */
