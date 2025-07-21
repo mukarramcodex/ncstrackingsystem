@@ -9,25 +9,42 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Parcel extends Model
 {
     protected $fillable = [
-        'tracking_id',
-        'tracking_number',
-        'customer_name',
-        'status',
-        'orgin',
-        'destination',
-        'weight',
-        'price',
-        'notes',
+        'booking_id',
+        'receipt_number',
+        'qr_code',
+        'sender_name',
+        'sender_phone',
+        'sender_cnic',
         'sender_email',
+        'receiver_name',
+        'receiver_phone',
+        'receiver_cnic',
         'receiver_email',
-        'receiver_number',
+        'origin',
+        'destination',
+        'booking_point',
+        'delivery_point',
+        'dimension',
+        'packing_type',
+        'pieces',
+        'goods_description',
+        'remarks',
+        'fare',
+        'discount',
+        'amount',
+        'total_amount',
+        'booking_time',
+        'booking_officer',
+        'branch',
+        'status',
+        'tracking_number',
     ];
 
-    protected $casts = [ 
-        'delivery_date' => 'date',
+    protected $casts = [
+        'booking_time' => 'datetime',
     ];
 
-    public function scopeDelivered($query) 
+    public function scopeDelivered($query)
     {
         return $query->where('status', 'Delivered');
     }
@@ -41,10 +58,15 @@ class Parcel extends Model
     {
         return $this->belongsTo(User::class, 'sender_email');
     }
-    
+
     public function receiver()
     {
         return $this->belongsTo(User::class, 'receiver_email');
+    }
+
+    public function bookingOfficer()
+    {
+        return $this->belongsTo(User::class, 'booking_officer');
     }
 
     public function trackingLogs()
