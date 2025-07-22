@@ -18,15 +18,15 @@ return new class extends Migration
             $table->string('qr_code')->nullable();
 
             $table->string('sender_name');
-            $table->string('sender_cnic')->nullable();
-            $table->string('sender_phone')->unique();
+            $table->string('sender_cnic', 15)->nullable();
+            $table->string('sender_phone', 11)->unique();
             $table->string('sender_email')->unique();
 
 
             $table->string('receiver_name');
-            $table->string('receiver_cnic')->nullable();
+            $table->string('receiver_cnic', 15)->nullable();
             $table->string('receiver_email')->unique();
-            $table->string('receiver_phone')->unique();
+            $table->string('receiver_phone', 11)->unique();
 
             $table->string('origin');
             $table->string('destination');

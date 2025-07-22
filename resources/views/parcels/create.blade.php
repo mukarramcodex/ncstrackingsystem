@@ -24,11 +24,11 @@
                     <div class="flex gap-2 ">
                         <div>
                             <label class="block font-medium text-gray-700">Sender Name</label>
-                            <input type="text" name="sender_name" class="w-full border rounded p-2 mt-1" required>
+                            <input type="text" name="sender_name" class="w-full border rounded p-2 mt-1" placeholder="Sender Name" required>
                         </div>
                         <div>
                             <label class="block font-medium text-gray-700">Sender CNIC</label>
-                            <input type="text" name="sender_cnic" class="w-full border rounded p-2 mt-1" required>
+                            <input type="text" name="sender_cnic" class="w-full border rounded p-2 mt-1" placeholder="XXXXX-XXXXXXX-X" maxlength="15" required>
                         </div>
 
                     </div>
@@ -36,11 +36,11 @@
                     <div class="flex gap-2 ">
                         <div>
                             <label class="block font-medium text-gray-700">Sender Email</label>
-                            <input type="email" name="sender_email" class="w-full border rounded p-2 mt-1" required>
+                            <input type="email" name="sender_email" class="w-full border rounded p-2 mt-1" placeholder="Sender Email" required>
                         </div>
                         <div>
                             <label class="block font-medium text-gray-700">Sender Phone</label>
-                            <input type="tel" name="sender_phone" class="w-full border rounded p-2 mt-1" required>
+                            <input type="tel" name="sender_phone" class="w-full border rounded p-2 mt-1" placeholder="Sender Phone" maxlength="11" required>
                         </div>
                     </div>
                 </div>
@@ -53,22 +53,22 @@
                     <div class="flex gap-2 ">
                         <div>
                             <label class="block font-medium text-gray-700">Receiver Name</label>
-                            <input type="text" name="receiver_name" class="w-full border rounded p-2 mt-1" required>
+                            <input type="text" name="receiver_name" class="w-full border rounded p-2 mt-1" placeholder="Receiver Name" required>
                         </div>
                         <div>
                             <label class="block font-medium text-gray-700">Receiver CNIC</label>
-                            <input type="text" name="receiver_cnic" class="w-full border rounded p-2 mt-1" required>
+                            <input type="text" name="receiver_cnic" class="w-full border rounded p-2 mt-1" placeholder="XXXXX-XXXXXXX-X" maxlength="15" required>
                         </div>
                     </div>
 
                     <div class="flex gap-2 ">
                         <div>
                             <label class="block font-medium text-gray-700">Receiver Email</label>
-                            <input type="email" name="receiver_email" class="w-full border rounded p-2 mt-1" required>
+                            <input type="email" name="receiver_email" class="w-full border rounded p-2 mt-1" placeholder="Receiver Email" required>
                         </div>
                         <div>
                             <label class="block font-medium text-gray-700">Receiver Phone</label>
-                            <input type="tel" name="receiver_phone" class="w-full border rounded p-2 mt-1" required>
+                            <input type="tel" name="receiver_phone" class="w-full border rounded p-2 mt-1" maxlength="11" placeholder="Receiver Phone" required>
                         </div>
                     </div>
                 </div>
