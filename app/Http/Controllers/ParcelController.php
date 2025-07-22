@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Parcel;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Picqer\Barcode\BarcodeGeneratorSVG;
 
 class ParcelController extends Controller
 {
@@ -13,6 +15,7 @@ class ParcelController extends Controller
     public function index()
     {
         $parcels = Parcel::latest()->paginate(10);
+        $parcels = Parcel::with('bookingOfficer')->get();
         return view('parcels.index', compact('parcels'));
     }
 
@@ -42,9 +45,16 @@ class ParcelController extends Controller
             'status' => 'required',
             'payment_status' => 'required',
             'booking_officer' => 'required',
+            'sender_name' => 'required',
+            'sender_phone' => 'required',
+            'sender_email' => 'required|email',
+            'receiver_name' => 'required',
+            'receiver_phone' => 'required',
+            'receiver_email' => 'required|email',
         ]);
-        Parcel::create($validated);
-        return redirect()->route('parcels.index')->with('success', 'Parcel created successfully');
+        $parcel = Parcel::create($validated);
+        return redirect()->route('parcel.download', $parcel->tracking_number);
+        // return redirect()->route('parcels.index')->with('success', 'Parcel created successfully');
     }
 
     /**
@@ -69,24 +79,34 @@ class ParcelController extends Controller
     public function update(Request $request, Parcel $parcel)
     {
         $validated = $request->validate([
-            'receiver_email' => 'required',
-            'orgin' => 'required',
+            'origin' => 'required',
+            'destination' => 'required',
             'status' => 'required',
             'payment_status' => 'required',
-            'destination' => 'required',
-            'customer_name' => 'required',
+            'sender_name' => 'required',
+            'sender_phone' => 'required',
+            'sender_email' => 'required|email',
+            'receiver_name' => 'required',
+            'receiver_phone' => 'required',
+            'receiver_email' => 'required|email',
         ]);
         $parcel->update($validated);
 
         return redirect()->route('parcels.index')->with('success', 'Parcel Updated.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function form(Request $request, string $id)
+    public function downloadByTrackingNumber($tracking_number)
     {
-        //
+        $parcel = Parcel::where('tracking_number', $tracking_number)
+                ->with('bookingOfficer')
+                ->firstOrFail();
+
+        $generator = new BarcodeGeneratorSVG();
+        $barcode = base64_encode($generator->getBarcode($tracking_number, BarcodeGeneratorSVG::TYPE_CODE_128));
+        $pdf = Pdf::loadView('pdf.parcels', compact('parcel', 'barcode'));
+        $filename ='Parcel_' . $parcel->tracking_number . '.pdf';
+        // return $pdf->download($filename);
+        return $pdf->download($filename);
     }
 
     /**
