@@ -22,23 +22,21 @@
 <body class="bg-white">
     <nav class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
         <div class="container mx-auto px-4 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+            <div class="flex items-center justify-evenly h-16">
                 <div class="flex items-center">
                     <div class="font-['Pacifico'] text-2xl text-primary font-bold">NCS</div>
                 </div>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
                     <a href="#track" class="text-gray-700 hover:text-primary transition-colors">Track</a>
-                    <a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
                     <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
                     <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
                 </div>
 
                 <div class="hidden md:flex items-center">
-                    <button class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
-                        Book Now
-                    </button>
+                    <a href="{{ route('login') }}" class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                        Login
+                    </a>
                 </div>
 
                 <div class="md:hidden">
@@ -436,7 +434,7 @@
     </section>
 
     <footer class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-4 lg:px-8">
+        <div class="container mx-auto px-20 lg:px-40">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <div class="font-['Pacifico'] text-2xl text-white font-bold mb-4">NCS</div>
@@ -490,11 +488,11 @@
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">
-                    © {{ now()->year }} North Courier Services. All rights reserved.
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-center items-center">
+                <p class="text-gray-400 text-sm justify-center">
+                    North Courier Services © {{ now()->year }} -  All rights reserved. Developed & Managed by <a href="https://www.mukarramali.net">Mukarram Ali</a>
                 </p>
-                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                {{-- <div class="flex items-center space-x-6 mt-4 md:mt-0">
                     <div class="w-6 h-6 flex items-center justify-center">
                         <i class="ri-visa-fill text-gray-400"></i>
                     </div>
@@ -504,7 +502,7 @@
                     <div class="w-6 h-6 flex items-center justify-center">
                         <i class="ri-paypal-fill text-gray-400"></i>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </footer>
