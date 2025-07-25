@@ -17,11 +17,13 @@ class SuperAdminController extends Controller
         $totalParcels = Parcel::count();
         $deliveredParcels = Parcel::where('status', 'Delivered')->count();
         $inTransitParcels = Parcel::where('status', 'In Transit')->count();
+        $recentParcels = Parcel::latest()->paginate(10);
 
         return view('SuperAdmin.dashboard', [
             'totalParcels' => $totalParcels,
             'deliveredParcels' => $deliveredParcels,
             'inTransitParcels' => $inTransitParcels,
+            'recentParcels' => $recentParcels,
         ]);
     }
 
