@@ -48,14 +48,12 @@
 
             <div id="mobile-menu" class="md:hidden hidden pb-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
                     <a href="#track" class="text-gray-700 hover:text-primary transition-colors">Track</a>
-                    <a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
                     <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
                     <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
-                    <button class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap w-fit">
-                        Book Now
-                    </button>
+                    <a href="{{ route('login') }}" class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                        Login
+                    </a>
                 </div>
             </div>
         </div>
