@@ -23,13 +23,13 @@ class ParcelFactory extends Factory
             'sender_name' => $this->faker->randomElement([
                 'Unver Kharal', 'Alakurt Shambhani', 'Shaamikh Ibrahim', 'Hooman Dar', 'Sait Longi', 'Tekinalp Orakzai', 'Beser Mahsud', 'Erkin Sabzvari', 'Jaarallah Muhammadzai', 'Ahmed Bukhari', 'Sooran Kenagzai', 'Bastug Mughal', 'Siddeeqi Jalbani', 'Yolbul Bappi', 'Kaamil Saadi'
             ]),
-            'sender_phone' => $this->faker->unique()->numerify('03##-#######'),
+            'sender_phone' => $this->faker->unique()->numerify('03#########'),
             'sender_cnic' => $this->faker->unique()->numerify('#####-#######-#'),
             'sender_email' => $this->faker->unique()->safeEmail(),
             'receiver_name' => $this->faker->randomElement([
                 'Unver Kharal', 'Alakurt Shambhani', 'Shaamikh Ibrahim', 'Hooman Dar', 'Sait Longi', 'Tekinalp Orakzai', 'Beser Mahsud', 'Erkin Sabzvari', 'Jaarallah Muhammadzai', 'Ahmed Bukhari', 'Sooran Kenagzai', 'Bastug Mughal', 'Siddeeqi Jalbani', 'Yolbul Bappi', 'Kaamil Saadi'
             ]),
-            'receiver_phone' => $this->faker->unique()->numerify('03##-#######'),
+            'receiver_phone' => $this->faker->unique()->numerify('03#########'),
             'receiver_cnic' => $this->faker->unique()->numerify('#####-#######-#'),
             'receiver_email' => $this->faker->unique()->safeEmail(),
             // 'delivery_date' => $this->faker->dateTimeBetween('+2 days', '+10 days')->format('d-m-Y'),
