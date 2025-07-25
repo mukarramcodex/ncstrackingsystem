@@ -62,7 +62,7 @@ class ParcelController extends Controller
      */
     public function show(Parcel $parcel)
     {
-        return view('parcels.show', compact('parcels'));
+        return view('parcels.show', compact('parcel'));
     }
 
     /**
