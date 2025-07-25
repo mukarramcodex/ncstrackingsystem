@@ -38,8 +38,9 @@ Route::middleware(['auth', 'role:staff'])->group(function () {
     Route::get('/admin/dashboard', [StaffController::class, 'index'])->name('staff.dashboard');
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth', 'verified')->group(function () {
     Route::resource('parcels', ParcelController::class);
+    Route::get('/parcels/tracking/{tracking_number}/download', [ParcelController::class, 'downloadbyTrackingNumber'])->name('parcel.download');
 });
 
 require __DIR__.'/auth.php';
