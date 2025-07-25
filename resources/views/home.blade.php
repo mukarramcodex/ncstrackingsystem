@@ -137,7 +137,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center mb-16">
