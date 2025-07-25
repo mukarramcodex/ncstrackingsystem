@@ -31,6 +31,7 @@
                     <a href="#track" class="text-gray-700 hover:text-primary transition-colors">Track</a>
                     <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
                     <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                    <a href="#bookparcel" class="text-gray-700 hover:text-primary transition-colors">Book a Parcel</a>
                 </div>
 
                 <div class="hidden md:flex items-center">
@@ -51,6 +52,7 @@
                     <a href="#track" class="text-gray-700 hover:text-primary transition-colors">Track</a>
                     <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
                     <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                    <a href="#bookparcel" class="text-gray-700 hover:text-primary transition-colors">Book a Parcel</a>
                     <a href="{{ route('login') }}" class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
                         Login
                     </a>
@@ -59,7 +61,7 @@
         </div>
     </nav>
     <section id="home" class="relative min-h-screen flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20logistics%20warehouse%20with%20delivery%20trucks%20and%20packages%2C%20professional%20courier%20service%20environment%20with%20clean%20white%20and%20blue%20color%20scheme%2C%20left%20side%20white%20space%20for%20text%20overlay%2C%20right%20side%20showing%20organized%20shipping%20operations%2C%20high-tech%20tracking%20systems%2C%20professional%20lighting%2C%20corporate%20photography%20style&width=1920&height=1080&seq=hero001&orientation=landscape'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-white bg-opacity-60"></div>
+        <div class="absolute inset-0 bg-white bg-opacity-20"></div>
         <div class="container mx-auto px-4 lg:px-8 relative z-10">
             <div class="w-full">
                 <div class="max-w-2xl">
@@ -287,6 +289,18 @@
         </div>
     </section>
 
+    <section id="bookparcel" class="py-20 bg-primary">
+        <div class="container mx-auto px-4 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Ship Your Package?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Join thousands of satisfied customers who trust North Courier Services for their delivery needs. Get started today!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="" class="bg-secondary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">Book a Delivery</a>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center mb-16">
@@ -414,23 +428,6 @@
         </div>
     </section>
 
-    <section class="py-20 bg-primary">
-        <div class="container mx-auto px-4 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold text-white mb-6">Ready to Ship Your Package?</h2>
-            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Join thousands of satisfied customers who trust North Courier Services for their delivery needs. Get started today!
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-secondary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
-                    Book a Delivery
-                </button>
-                <button class="bg-transparent border-2 border-white text-white px-8 py-3 !rounded-button hover:bg-white hover:text-primary transition-colors whitespace-nowrap">
-                    Get Quote
-                </button>
-            </div>
-        </div>
-    </section>
-
     <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-20 lg:px-40">
             <div class="grid md:grid-cols-4 gap-8">
@@ -490,17 +487,6 @@
                 <p class="text-gray-400 text-sm justify-center">
                     North Courier Services © {{ now()->year }} -  All rights reserved. Developed & Managed by <a href="https://www.mukarramali.net">Mukarram Ali</a>
                 </p>
-                {{-- <div class="flex items-center space-x-6 mt-4 md:mt-0">
-                    <div class="w-6 h-6 flex items-center justify-center">
-                        <i class="ri-visa-fill text-gray-400"></i>
-                    </div>
-                    <div class="w-6 h-6 flex items-center justify-center">
-                        <i class="ri-mastercard-fill text-gray-400"></i>
-                    </div>
-                    <div class="w-6 h-6 flex items-center justify-center">
-                        <i class="ri-paypal-fill text-gray-400"></i>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </footer>
