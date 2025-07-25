@@ -22,8 +22,18 @@
                             <td class="px-4 py-2">{{ $parcel->tracking_number }}</td>
                             <td class="px-4 py-2">{{ $parcel->origin }}</td>
                             <td class="px-4 py-2">{{ $parcel->destination }}</td>
-                            <td class="px-4 py-2">{{ $parcel->status }}
-                                
+                            <td class="px-4 py-2">
+                                 @php
+                                    $badgeClass = [
+                                    'Delivered' => 'bg-green-300 text-primary-foreground',
+                                    'In Transit' => 'bg-yellow-300 text-secondary-foreground',
+                                    'Out for Delivery' => 'border border-input bg-green-600 hover:bg-accent hover:text-accent-foreground',
+                                    'Pending' => 'bg-blue-300 text-destructive-foreground',
+                                        ][$parcel->status] ?? 'border border-input bg-background hover:bg-accent hover:text-accent-foreground';
+                                 @endphp
+                                <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 {{ $badgeClass }}">
+                                    {{ $parcel->status }}
+                                </span>
                             </td>
                             <td class="px-4 py-2 flex space-x-2 justify-center">
                                 <a href="{{ route('parcels.show', $parcel->receipt_number) }}" class="text-white hover:bg-blue-900 bg-blue-600 rounded-lg py-1 px-3 ">View</a>
