@@ -37,7 +37,7 @@
                             </td>
                             <td class="px-4 py-2 flex space-x-2 justify-center">
                                 <a href="{{ route('parcels.show', $parcel->id) }}" class="text-white hover:bg-blue-900 bg-blue-600 rounded-lg py-1 px-3 ">View</a>
-                                <a href="{{ route('parcels.edit', $parcel->tracking_number) }}" class="text-white bg-yellow-600 hover:bg-yellow-900 rounded-lg py-1 px-3">Edit</a>
+                                <a href="{{ route('parcels.edit', $parcel->id) }}" class="text-white bg-yellow-600 hover:bg-yellow-900 rounded-lg py-1 px-3">Edit</a>
                                 <form action="{{ route('parcels.destroy', $parcel->id) }}" method="POST" onsubmit="return confirm('Are you sure?')" class="inline-block">
                                     @csrf
                                     @method('DELETE')
