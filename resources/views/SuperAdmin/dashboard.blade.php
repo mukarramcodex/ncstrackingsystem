@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Admin Dashboard') }}
+            {{ __('Super Admin Dashboard') }}
         </h2>
     </x-slot>
 
@@ -128,10 +128,10 @@
                                             <td class="p-4 align-middle">
                                                 @php
                                                     $badgeClass = [
-                                                        'Delivered' => 'bg-primary text-primary-foreground',
-                                                        'In Transit' => 'bg-secondary text-secondary-foreground',
-                                                        'Out for Delivery' => 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-                                                        'Pending' => 'bg-destructive text-destructive-foreground',
+                                                        'Delivered' => 'bg-green-300 text-primary-foreground',
+                                                        'In Transit' => 'bg-yellow-300 text-secondary-foreground',
+                                                        'Out for Delivery' => 'border border-input bg-green-600 hover:bg-accent hover:text-accent-foreground',
+                                                        'Pending' => 'bg-blue-300 text-destructive-foreground',
                                                     ][$parcel->status] ?? 'border border-input bg-background hover:bg-accent hover:text-accent-foreground';
                                                 @endphp
                                                 <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 {{ $badgeClass }}">
@@ -142,7 +142,7 @@
                                             <td class="p-4 align-middle">{{ $parcel->receiver_name }}</td>
                                             <td class="p-4 align-middle">{{ $parcel->booking_time->format('d-m-Y H:i:s') }}</td>
                                             <td class="p-4 align-middle text-right">
-                                                <a href="{{ route('parcels.show', $parcel->id) }}" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 px-3">
+                                                <a href="{{ route('parcels.show', $parcel->booking_id) }}" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 px-3">
                                                     View
                                                 </a>
                                             </td>
