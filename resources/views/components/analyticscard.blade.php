@@ -6,7 +6,7 @@
     'class' => ''
 ])
 
-<div {{ $attributes->merge(['class' => "rounded-lg border bg-card text-card-foreground shadow-sm $class"]) }}>
+<div {{ $attributes->merge(['class' => "rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-inner $class"]) }}>
     <div class="flex flex-row items-center justify-between space-y-0 p-6 pb-2">
         <h3 class="text-sm font-medium tracking-tight">{{ $title }}</h3>
         @if($icon)
