@@ -142,7 +142,7 @@
                                             <td class="p-4 align-middle">{{ $parcel->receiver_name }}</td>
                                             <td class="p-4 align-middle">{{ $parcel->booking_time->format('d-m-Y H:i:s') }}</td>
                                             <td class="p-4 align-middle text-right">
-                                                <a href="{{ route('parcels.show', $parcel->booking_id) }}" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 px-3">
+                                                <a href="{{ route('parcels.show', $parcel->receipt_number) }}" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 px-3">
                                                     View
                                                 </a>
                                             </td>

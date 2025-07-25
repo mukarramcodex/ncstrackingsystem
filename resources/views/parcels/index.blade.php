@@ -24,8 +24,8 @@
                             <td class="px-4 py-2">{{ $parcel->destination }}</td>
                             <td class="px-4 py-2">{{ $parcel->status }}</td>
                             <td class="px-4 py-2 flex space-x-2 justify-center">
-                                <a href="{{ route('parcels.show', $parcel->id) }}" class="text-blue-600 hover:underline">View</a>
-                                <a href="{{ route('parcels.edit', $parcel->id) }}" class="text-yellow-600 hover:underline">Edit</a>
+                                <a href="{{ route('parcels.show', $parcel->receipt_number) }}" class="text-blue-600 hover:underline">View</a>
+                                <a href="{{ route('parcels.edit', $parcel->receipt_number) }}" class="text-yellow-600 hover:underline">Edit</a>
                                 <form action="{{ route('parcels.destroy', $parcel->id) }}" method="POST" onsubmit="return confirm('Are you sure?')" class="inline-block">
                                     @csrf
                                     @method('DELETE')
