@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ParcelController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\SuperAdminController;
@@ -35,6 +36,10 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 Route::middleware(['auth', 'role:staff'])->group(function () {
     Route::resource('admin', StaffController::class);
     Route::get('/admin/dashboard', [StaffController::class, 'index'])->name('staff.dashboard');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::resource('parcels', ParcelController::class);
 });
 
 require __DIR__.'/auth.php';
