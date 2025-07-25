@@ -301,6 +301,18 @@
         </div>
     </section>
 
+    <section id="contactus" class="py-20 bg-white border-b-0 shadow">
+        <div class="container mx-auto px-4 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-primary mb-6">Get In Touch</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Have questions? We're here to help with all your shipping needs
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+923312345678" class="bg-secondary text-white px-8 py-3 shadow !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">Call us Now!</a>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center mb-16">
@@ -473,9 +485,13 @@
                 </div>
 
                 <div>
-                    <h3 class="font-semibold mb-4">Company</h3>
+                    <h3 class="font-semibold mb-4">Contact Information</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors flex gap-3 items-center">
+                            <div class="w-2 h-2 flex items-center justify-center bg-primary bg-opacity-10 rounded-full flex-shrink-0">
+                                <i class="ri-map-pin-line ri-lg text-white"></i>
+                            </div>1234 Logistics Avenue<br>
+                                    Business District, NY 10001</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
