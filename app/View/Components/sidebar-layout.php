@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class sidebar-layout extends Component
+class sidebarlayout extends Component
 {
     /**
      * Create a new component instance.
