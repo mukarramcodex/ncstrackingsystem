@@ -19,8 +19,10 @@
     </style>
 
 </head>
-<body>
-    <div class="sidebar bg-gray-800 text-white w-64 min-h-screen fixed transition-all duration-300 ease-in-out">
+<body x-data="{ sidebarOpen: true }" class="flex">
+    <div class="sidebar bg-gray-800 text-white w-64 min-h-screen fixed transition-all duration-300 ease-in-out"
+        :class="sidebarOpen ? 'w-64' : 'w-16'"
+        >
     <div class="sidebar-header p-4 border-b border-gray-700 flex items-center">
         <div class="logo flex items-center">
                 <svg class="w-8 h-8 mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" zoomAndPan="magnify" viewBox="0 0 36 36.000001" height="80" preserveAspectRatio="xMidYMid meet" version="1.2">
@@ -39,7 +41,7 @@
                             </g>
                         </g>
                 </svg>
-            <span class="text-md font-bold">North Courier Services</span>
+            <span x-show="sidebarOpen" class="text-md font-bold transition-all duration-200">North Courier Services</span>
         </div>
     </div>
     <nav class="sidebar-menu p-4">
@@ -50,7 +52,7 @@
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
                     </svg>
-                    <span>Dashboard</span>
+                    <span x-show="sidebarOpen" class="transition-all duration-200">Dashboard</span>
                 </a>
             </li>
             <li>
@@ -58,13 +60,13 @@
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
                     </svg>
-                    <span>Parcels</span>
+                    <span x-show="sidebarOpen" class="transition-all duration-200">Parcels</span>
                 </a>
             </li>
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700">
                     <i class="ri-file-chart-line w-5 h-5 mr-3 text-white"></i>
-                    <span>Reports</span>
+                    <span x-show="sidebarOpen" class="transition-all duration-200">Reports</span>
                 </a>
             </li>
             <li>
@@ -72,31 +74,31 @@
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                     </svg>
-                    <span>Users</span>
+                    <span x-show="sidebarOpen" class="transition-all duration-200">Users</span>
                 </a>
             </li>
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <i class="ri-home-4-line w-5 h-5 mr-3 text-white"></i>
-                    <span>Branches</span>
+                    <span x-show="sidebarOpen" class="transition-all duration-200">Branches</span>
                 </a>
             </li>
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <i class="ri-route-line w-5 h-5 mr-3"></i>
-                    <span>Tracking Logs</span>
+                    <span x-show="sidebarOpen" class="transition-all duration-200">Tracking Logs</span>
                 </a>
             </li>
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <i class="ri-bar-chart-line w-5 h-5 mr-3"></i>
-                    <span>Reports</span>
+                    <span x-show="sidebarOpen" class="transition-all duration-200">Reports</span>
                 </a>
             </li>
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <i class="ri-settings-2-line w-5 h-5 mr-3"></i>
-                    <span>Settings</span>
+                    <span x-show="sidebarOpen" class="transition-all duration-200">Settings</span>
                 </a>
             </li>
             <li class="mt-8">
@@ -104,7 +106,7 @@
                     <button @click="open = !open" class="flex items-center justify-between w-full p-2 rounded hover:bg-gray-700">
                         <div class="flex items-center">
                             <i class="ri-user-settings-line w-5 h-5 mr-3"></i>
-                            <span>Profile</span>
+                            <span x-show="sidebarOpen" class="transition-all duration-200">Profile</span>
                         </div>
                         <svg class="w-4 h-4 transition-transform duration-200 transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -127,14 +129,9 @@
                 <img class="w-8 h-8 rounded-full mr-2" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}">
                 <span>{{ Auth::user()->name }}</span>
             </div>
-            <form method="POST" action="">
-                @csrf
-                <button type="submit" class="text-gray-400 hover:text-white">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
-                    </svg>
+                <button @click="sidebarOpen = !sidebarOpen" type="submit" class="text-gray-400 hover:text-white">
+                    <i :class="sidebarOpen ? 'ri-menu-fold-line' : 'ri-menu-unfold-line' " class="w-7 h-7"></i>
                 </button>
-            </form>
         </div>
     </div>
 </div>
