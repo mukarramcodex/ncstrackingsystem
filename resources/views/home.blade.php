@@ -486,15 +486,15 @@
 
                 <div>
                     <h3 class="font-semibold mb-4">Contact Information</h3>
-                    <ul class="space-y-2 text-gray-400">
+                    <ul class="space-y-2 text-gray-400 ">
                         <li><a href="#" class="hover:text-white transition-colors flex gap-3 items-center">
                             <div class="w-2 h-2 flex items-center justify-center bg-primary bg-opacity-10 rounded-full flex-shrink-0">
-                                <i class="ri-map-pin-line ri-lg text-white"></i>
+                                <i class="ri-mail-unread-line ri-lg text-white"></i>
                             </div>info@northcourier.com</a></li>
                         <li>
                             <a href="#" class="hover:text-white transition-colors flex gap-3 items-center">
                             <div class="w-2 h-2 flex items-center justify-center bg-primary bg-opacity-10 rounded-full flex-shrink-0">
-                                <i class="ri-map-pin-line ri-lg text-white"></i>
+                                <i class="ri-phone-line ri-lg text-white"></i>
                             </div>+1 (555) 123-4567</a>
                         </li>
                         <li>
