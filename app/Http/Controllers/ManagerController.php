@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Parcel;
 use Illuminate\Http\Request;
 
 class ManagerController extends Controller
@@ -35,7 +36,17 @@ class ManagerController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $totalParcels = Parcel::count();
+        $deliveredParcels = Parcel::where('status', 'Delivered')->count();
+        $inTransitParcels = Parcel::where('status', 'In Transit')->count();
+        $recentParcels = Parcel::latest()->paginate(10);
+
+        return view('Manager.dashboard', [
+            'totalParcels' => $totalParcels,
+            'deliveredParcels' => $deliveredParcels,
+            'inTransitParcels' => $inTransitParcels,
+            'recentParcel' => $recentParcels,
+        ]);
     }
 
     /**
