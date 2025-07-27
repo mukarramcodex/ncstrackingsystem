@@ -490,11 +490,27 @@
                         <li><a href="#" class="hover:text-white transition-colors flex gap-3 items-center">
                             <div class="w-2 h-2 flex items-center justify-center bg-primary bg-opacity-10 rounded-full flex-shrink-0">
                                 <i class="ri-map-pin-line ri-lg text-white"></i>
+                            </div>info@northcourier.com</a></li>
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors flex gap-3 items-center">
+                            <div class="w-2 h-2 flex items-center justify-center bg-primary bg-opacity-10 rounded-full flex-shrink-0">
+                                <i class="ri-map-pin-line ri-lg text-white"></i>
+                            </div>+1 (555) 123-4567</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors flex gap-3 items-center">
+                            <div class="w-2 h-2 flex items-center justify-center bg-primary bg-opacity-10 rounded-full flex-shrink-0">
+                                <i class="ri-map-pin-line ri-lg text-white"></i>
                             </div>1234 Logistics Avenue<br>
-                                    Business District, NY 10001</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                                    Business District, NY 10001</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors flex gap-3 items-center">
+                            <div class="w-2 h-2 flex items-center justify-center bg-primary bg-opacity-10 rounded-full flex-shrink-0">
+                                <i class="ri-map-pin-line ri-lg text-white"></i>
+                            </div>1234 Logistics Avenue<br>
+                                    Business District, NY 10001</a>
+                        </li>
                     </ul>
                 </div>
             </div>
