@@ -31,16 +31,16 @@ A full-featured Parcel Tracking & Management System for Web, Mobile, and Desktop
 
 ## 👥 User Roles & Features
 
-### 🛡️ Super Admin
+### 🛡️ Admin
 - Dashboard overview (parcels, revenue, staff)
-- CRUD All Users (Admin, Staff)
+- CRUD All Users (Manager, Staff)
 - Branch management
 - Global reports (PDF/CSV)
 - Revenue analytics
 - System Settings
 - Activity Logs
 
-### 🧑‍💼 Admin / Manager
+### 🧑‍💼 Manager
 - Branch dashboard (parcel status, staff, revenue)
 - CRUD Branches & Staff
 - Assign parcels to staff
