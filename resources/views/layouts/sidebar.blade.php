@@ -42,8 +42,6 @@
             <span class="text-md font-bold">North Courier Services</span>
         </div>
     </div>
-
-
     <nav class="sidebar-menu p-4">
         <ul class="space-y-2">
 
@@ -55,8 +53,6 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-
-
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 {{ request()->routeIs('parcels.*') ? 'bg-gray-700' : '' }}">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,16 +61,12 @@
                     <span>Parcels</span>
                 </a>
             </li>
-
-
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700">
                     <i class="ri-file-chart-line w-5 h-5 mr-3 text-white"></i>
                     <span>Reports</span>
                 </a>
             </li>
-
-
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,42 +75,47 @@
                     <span>Users</span>
                 </a>
             </li>
-
-
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <i class="ri-home-4-line w-5 h-5 mr-3 text-white"></i>
                     <span>Branches</span>
                 </a>
             </li>
-
-
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <i class="ri-route-line w-5 h-5 mr-3"></i>
                     <span>Tracking Logs</span>
                 </a>
             </li>
-
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <i class="ri-bar-chart-line w-5 h-5 mr-3"></i>
                     <span>Reports</span>
                 </a>
             </li>
-
-            <li>
-                <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
-                    <i class="ri-user-settings-line w-5 h-5 mr-3"></i>
-                    <span>Profile</span>
-                </a>
-            </li>
-
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <i class="ri-settings-2-line w-5 h-5 mr-3"></i>
                     <span>Settings</span>
                 </a>
+            </li>
+            <li class="mt-8">
+                <div x-data="{ open: false }" class="relative">
+                    <button @click="open = !open" class="flex items-center justify-between w-full p-2 rounded hover:bg-gray-700">
+                        <div class="flex items-center">
+                            <i class="ri-user-settings-line w-5 h-5 mr-3"></i>
+                            <span>Profile</span>
+                        </div>
+                        <svg class="w-4 h-4 transition-transform duration-200 transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+
+                    <div x-show="open" @click.away="open = false" class="mt-2 ml-8 space-y-2">
+                        <a href="{{ route('profile.edit') }}" class="block p-2 rounded hover:bg-gray-700">Edit</a>
+                        <a href="{{ route('profile.edit') }}" class="block p-2 rounded hover:bg-gray-700">Logout</a>
+                    </div>
+                </div>
             </li>
         </ul>
     </nav>
