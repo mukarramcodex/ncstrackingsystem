@@ -43,10 +43,10 @@
         </div>
     </div>
 
-    <!-- Navigation Menu -->
+
     <nav class="sidebar-menu p-4">
         <ul class="space-y-2">
-            <!-- Dashboard -->
+
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 {{ request()->routeIs('dashboard') ? 'bg-gray-700' : '' }}">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@
                 </a>
             </li>
 
-            <!-- Parcels -->
+
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 {{ request()->routeIs('parcels.*') ? 'bg-gray-700' : '' }}">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,7 +66,7 @@
                 </a>
             </li>
 
-            <!-- Tracking -->
+
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700">
                     <i class="ri-file-chart-line w-5 h-5 mr-3 text-white"></i>
@@ -74,7 +74,7 @@
                 </a>
             </li>
 
-            <!-- Customers -->
+
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,7 +84,7 @@
                 </a>
             </li>
 
-            <!-- Drivers/Couriers -->
+
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
                     <i class="ri-home-4-line w-5 h-5 mr-3 text-white"></i>
@@ -92,17 +92,22 @@
                 </a>
             </li>
 
-            <!-- Reports -->
+
             <li>
                 <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
+                    <i class="ri-route-line"></i>
+                    <span>Tracking Logs</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 ">
+                    <i class="ri-bar-chart-line"></i>
                     <span>Reports</span>
                 </a>
             </li>
 
-            <!-- Settings Dropdown -->
+
             <li class="mt-8">
                 <div x-data="{ open: false }" class="relative">
                     <button @click="open = !open" class="flex items-center justify-between w-full p-2 rounded hover:bg-gray-700">
