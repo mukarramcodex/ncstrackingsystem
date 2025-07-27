@@ -15,10 +15,6 @@ class UserSeeder extends Seeder
     {
         $user = User::insert([
             [
-                'name' => 'SuperAdmin', 'username' => 'superadmin', 'role' => 'superadmin', 'email' => 'superadmin@ncs.test', 'password' => bcrypt('SuperAdmin@1234567')
-            ],
-
-            [
                 'name' => 'Admin', 'username' => 'admin', 'role' => 'admin', 'email' => 'admin@ncs.test', 'password' => bcrypt('Admin@1234567')
             ],
 
