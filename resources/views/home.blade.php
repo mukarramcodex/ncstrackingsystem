@@ -60,8 +60,8 @@
             </div>
         </div>
     </nav>
-    <section id="home" class="relative min-h-screen flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20logistics%20warehouse%20with%20delivery%20trucks%20and%20packages%2C%20professional%20courier%20service%20environment%20with%20clean%20white%20and%20blue%20color%20scheme%2C%20left%20side%20white%20space%20for%20text%20overlay%2C%20right%20side%20showing%20organized%20shipping%20operations%2C%20high-tech%20tracking%20systems%2C%20professional%20lighting%2C%20corporate%20photography%20style&width=1920&height=1080&seq=hero001&orientation=landscape'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-white bg-opacity-20"></div>
+    <section id="home" class="relative min-h-screen bg-gradient-to-br from-blue-50 to-teal-50 flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20logistics%20warehouse%20with%20delivery%20trucks%20and%20packages%2C%20professional%20courier%20service%20environment%20with%20clean%20white%20and%20blue%20color%20scheme%2C%20left%20side%20white%20space%20for%20text%20overlay%2C%20right%20side%20showing%20organized%20shipping%20operations%2C%20high-tech%20tracking%20systems%2C%20professional%20lighting%2C%20corporate%20photography%20style&width=1920&height=1080&seq=hero001&orientation=landscape'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+        <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
         <div class="container mx-auto px-4 lg:px-8 relative z-10">
             <div class="w-full">
                 <div class="max-w-2xl">
