@@ -36,15 +36,7 @@ class StaffController extends Controller
      */
     public function show()
     {
-        $totalParcels = Parcel::count();
-        $deliveredParcels = Parcel::where('status', 'Delivered')->count();
-        $inTransitParcels = Parcel::where('status', 'In Transit')->count();
-
-        return view('staff.dashboard', [
-            'totalParcels' => $totalParcels,
-            'deliveredParcels' => $deliveredParcels,
-            'inTransitParcels' => $inTransitParcels,
-        ]);
+       //
     }
 
     /**

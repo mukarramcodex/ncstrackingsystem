@@ -4,15 +4,38 @@ namespace App\Http\Controllers;
 
 use App\Models\Parcel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class AdminController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $totalParcels = Parcel::count();
+        $deliveredParcels = Parcel::where('status', 'Delivered')->count();
+        $inTransitParcels = Parcel::where('status', 'In Transit')->count();
+        $recentParcels = Parcel::latest()->paginate(10);
+        $user = Auth::user();
+
+        $data = compact(
+            'totalParcels',
+            'deliveredParcels',
+            'InTransitParcels',
+            'recentParcels',
+        );
+
+        switch ($user->role) {
+            case 'admin' :
+                return view('dashboard.admin', $data);
+            case 'manager' :
+                return view('dashboard.manager', $data);
+            case 'staff' :
+                return view('dashboard.staff', $data);
+            default :
+                abort(403, 'Unauthorized' );
+        }
     }
 
     /**
@@ -34,7 +57,7 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(string $id)
     {
         //
     }
