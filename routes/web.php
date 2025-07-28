@@ -6,6 +6,7 @@ use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\ParcelController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StaffController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,4 +31,8 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/parcels/tracking/{tracking_number}/download', [ParcelController::class, 'downloadbyTrackingNumber'])->name('parcel.download');
 });
 
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect('/login');
+    });
 require __DIR__.'/auth.php';

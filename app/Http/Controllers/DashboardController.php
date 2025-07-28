@@ -22,7 +22,7 @@ class DashboardController extends Controller
         $data = compact(
             'totalParcels',
             'deliveredParcels',
-            'InTransitParcels',
+            'inTransitParcels',
             'recentParcels',
         );
 

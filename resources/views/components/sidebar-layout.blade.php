@@ -3,7 +3,7 @@
             >
         <div class="sidebar-header p-4 border-b border-gray-300 flex items-center">
             <div class="logo flex items-center">
-                    <x-ncs-logo class="w-8 h-8 mr-2" />
+                    <x-logo.ncs class="w-3 h-3 mr-2" />
                 <span x-show="sidebarOpen" class="text-sm font-bold transition-all duration-200">North Courier Services</span>
             </div>
         </div>
@@ -74,7 +74,7 @@
                                 <i class="ri-edit-box-line w-5 h-5 mr-3"></i>
                                 <span x-show="sidebarOpen" class="transition-all duration-200">Edit</span>
                                 </a>
-                            <a href="#" class="block p-2 rounded hover:text-white hover:bg-blue-700">
+                            <a href="/logout" class="block p-2 rounded hover:text-white hover:bg-blue-700">
                                 <i class="ri-logout-circle-line w-5 h-5 mr-3"></i>
                                 <span x-show="sidebarOpen" class="transition-all duration-200">Logout</span>
                                 </a>
