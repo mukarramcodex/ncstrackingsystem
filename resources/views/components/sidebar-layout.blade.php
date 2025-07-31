@@ -1,10 +1,10 @@
-<aside class="sidebar bg-white text-black shadow w-64 min-h-screen fixed transition-all duration-300 ease-in-out"
+<aside class="sidebar bg-white text-black shadow w-60 min-h-screen fixed transition-all duration-300 ease-in-out"
             :class="sidebarOpen ? 'w-64' : 'w-16'"
             >
         <div class="sidebar-header p-4 border-b border-gray-300 flex items-center">
             <div class="logo flex items-center">
-                    <x-logo.ncs class="w-3 h-3 mr-2" />
-                <span x-show="sidebarOpen" class="text-sm font-bold transition-all duration-200">North Courier Services</span>
+                    <x-logo.applogo />
+                <span x-show="sidebarOpen" class="text-sm font-bold transition-all duration-200 ml-3">North Courier Services</span>
             </div>
         </div>
         <div class="sidebar-menu p-2">

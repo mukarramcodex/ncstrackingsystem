@@ -13,6 +13,6 @@ class ParcelSeeder extends Seeder
      */
     public function run(): void
     {
-        Parcel::factory()->count(30)->create();
+        Parcel::factory()->count(15)->create();
     }
 }
