@@ -5,12 +5,6 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
-        <!-- Email Address
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div> -->
         <!-- Email Address & Username -->
         <div>
             <x-input-label for="login" :value="__('Email or Username')" />
@@ -25,7 +19,8 @@
             <x-text-input id="password" class="block mt-1 w-full"
                             type="password"
                             name="password"
-                            required autocomplete="current-password" />
+                            required autocomplete="current-password"
+                            viewable/>
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
@@ -48,6 +43,9 @@
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
             </x-primary-button>
+        </div>
+        <div class="flex flex-col items-center sm:justify-center mt-4">
+            <p class="text-sm text-gray-600">Dont have an account? <a href="/" class="text-blue-600 hover:text-blue-900 text-under">Contact Support</a></p>
         </div>
     </form>
 </x-guest-layout>
