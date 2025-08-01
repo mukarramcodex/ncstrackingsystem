@@ -59,4 +59,9 @@ class User extends Authenticatable
             'password' => ['required', 'confirmed', RulesPassword::defaults()],
         ];
     }
+
+    public function branch()
+    {
+        return $this->belongsTo(Branch::class);
+    }
 }

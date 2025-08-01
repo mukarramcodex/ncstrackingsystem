@@ -76,4 +76,9 @@ class Parcel extends Model
     }
 
     use HasFactory;
+
+    public function revenue()
+    {
+        return $this->hasOne(Revenue::class);
+    }
 }
