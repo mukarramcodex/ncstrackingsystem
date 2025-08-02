@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::middleware('auth')->get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::middleware('auth')->get('/parcels.index', [ParcelController::class, 'index'])->name('parcels');
 Route::middleware('auth')->get('/user.index', [UserController::class, 'index'])->name('users');
-Route::middleware('auth')->get('/branch.index', [BranchController::class], 'index')->name('branches');
+Route::middleware('auth')->get('/branches.index', [BranchController::class], 'index')->name('branches');
 Route::middleware('auth')->get('/revenue.index', [RevenueController::class], 'index')->name('revenue');
 
 Route::middleware('auth')->group(function () {
@@ -54,6 +54,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/revenue', [RevenueController::class, 'index'])->name('revenue.index');
     Route::get('/revenue/branch/{id}', [RevenueController::class, 'branchRevenue'])->name('revenue.branch');
     Route::get('/revenue/parcel', [RevenueController::class, 'parcelRevenue'])->name('revenue.parcel');
+    Route::get('/revenue/export/pdf', [RevenueController::class, 'exportPdf'])->name('revenue.export.pdf');
+
 });
 
 Route::get('/logout', function () {
