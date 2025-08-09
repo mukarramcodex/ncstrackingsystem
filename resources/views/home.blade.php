@@ -60,35 +60,17 @@
             </div>
         </div>
     </nav>
-    <section id="home" class="relative min-h-screen bg-gradient-to-br from-blue-50 to-teal-50 flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20logistics%20warehouse%20with%20delivery%20trucks%20and%20packages%2C%20professional%20courier%20service%20environment%20with%20clean%20white%20and%20blue%20color%20scheme%2C%20left%20side%20white%20space%20for%20text%20overlay%2C%20right%20side%20showing%20organized%20shipping%20operations%2C%20high-tech%20tracking%20systems%2C%20professional%20lighting%2C%20corporate%20photography%20style&width=1920&height=1080&seq=hero001&orientation=landscape'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+    <section id="home" class="relative min-h-screen bg-gradient-to-br from-blue-50 to-teal-50 flex items-center" style="background-image: url('{{ asset('image/hero_banner_image_1.jpg') }}'); background-size: cover; background-position: center; background-blend-mode: overlay;">
         <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
         <div class="container mx-auto px-4 lg:px-8 relative z-10">
-            <div class="w-full">
-                <div class="max-w-2xl">
-                    <h1 class="text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
-                        Track Your Parcel Anytime, Anywhere
+            <div class="w-half">
+                <div class="">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight text-center">
+                        Track Your Parcel<br/> Anytime, Anywhere
                     </h1>
-                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-                        Experience reliable and fast delivery services with real-time tracking across the nation. Your packages are in safe hands with North Courier Services.
+                    <p class="text-xl text-gray-900 text-bold mb-8 leading-relaxed text-center">
+                        Experience reliable and fast delivery services with real-time tracking across the nation.<br/> Your packages are in safe hands with North Courier Services.
                     </p>
-
-                    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Track Your Package</h3>
-                        <div class="flex gap-3">
-                            <input
-                                type="text"
-                                id="tracking-input"
-                                placeholder="Enter Tracking ID (e.g., NCS123456789)"
-                                class="flex-1 px-4 py-3 border border-gray-300 !rounded-button focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
-                            >
-                            <button
-                                id="track-btn"
-                                class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap"
-                            >
-                                Track Now
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
