@@ -21,10 +21,10 @@ Route::get('/', function () {
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::middleware('auth')->get('/parcels.index', [ParcelController::class, 'index'])->name('parcels');
-Route::middleware('auth')->get('/user.index', [UserController::class, 'index'])->name('users');
-Route::middleware('auth')->get('/branches.index', [BranchController::class], 'index')->name('branches');
-Route::middleware('auth')->get('/revenue.index', [RevenueController::class], 'index')->name('revenue');
+Route::middleware('auth')->get('/parcels', [ParcelController::class, 'index'])->name('parcels');
+Route::middleware('auth')->get('/user', [UserController::class, 'index'])->name('users');
+Route::middleware('auth')->get('/branches', [BranchController::class, 'index'])->name('branches');
+Route::middleware('auth')->get('/revenue', [RevenueController::class, 'index'])->name('revenue');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

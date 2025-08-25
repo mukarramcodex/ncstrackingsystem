@@ -37,11 +37,11 @@
                             <td class="px-4 py-3 ">
                                 <a href="#" class="text-white hover:bg-blue-900 bg-blue-600 rounded-lg py-1 px-3 ">View</a>
                                 <a href="#" class="text-white bg-yellow-600 hover:bg-yellow-900 rounded-lg py-1 px-3">Edit</a>
-                                <form action="#" method="POST" onsubmit="return confirm('Are you sure?')" class="inline-block">
+                                {{-- <form action="#" method="POST" onsubmit="return confirm('Are you sure?')" class="inline-block">
                                     @csrf
                                     @method('DELETE')
                                     <button class="text-white bg-red-600 hover:bg-red-900 rounded-lg py-1 px-3" type="submit">Delete</button>
-                                </form>
+                                </form> --}}
                             </td>
                         </tr>
                     @empty
