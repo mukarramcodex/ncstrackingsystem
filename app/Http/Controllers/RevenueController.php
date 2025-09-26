@@ -141,6 +141,6 @@ class RevenueController extends Controller
         ];
 
         $pdf = Pdf::loadview('revenue.export', $data);
-        return $pdf->download('revenue-report.pdf');
+        return $pdf->download('revenue-report.pdf');    
     }
 }
